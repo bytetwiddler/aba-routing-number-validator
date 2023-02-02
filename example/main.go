@@ -1,8 +1,7 @@
-package validator
+package main
 
 import (
 	"fmt"
-	"os"
 
 	v "github.com/bytetwiddler/aba-routingnumber-validator"
 	"github.com/jedib0t/go-pretty/table"
@@ -21,14 +20,7 @@ func tablePrint(tw table.Writer) {
 	fmt.Printf("Unit Results:\n%s\n", tw.Render())
 }
 
-var verbose = false
-
 func main() {
-	if len(os.Args) > 1 {
-		if os.Args[1] == "-v" {
-			verbose = true
-		}
-	}
 
 	// setup our test table
 	testTable := []test{
@@ -41,10 +33,20 @@ func main() {
 		{"134567890", false, "1st 2 digits not between 01-12"},
 	}
 
+	fmt.Println(`Note: errors are just printed out and not handled as we are passing test data
+and expect errors. Check the tables PASS/FAIL field to see if a particular 
+routing number got the expected result.
+	 `)
 	tw := table.NewWriter()
 	for _, t := range testTable {
-		slc := stringSlicer(t.value)
-		result := v.ValidateAbaRoutingNumber(slc)
+		slc, err := v.StringSlicer(t.value)
+		if err != nil {
+			fmt.Println("error: ", err)
+		}
+		result, err := v.ValidateAbaRoutingNumber(slc)
+		if err != nil {
+			fmt.Println("error: ", err)
+		}
 		if result == t.expect {
 			tw.AppendRow(table.Row{"\u2713", t.value, t.expect, result, t.description})
 		} else {

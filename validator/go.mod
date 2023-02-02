@@ -16,5 +16,4 @@ require (
 	go.mongodb.org/mongo-driver v1.10.0 // indirect
 	golang.org/x/sys v0.4.0 // indirect
 
-//replace github.com/bytetwiddler/aba-routingnumber-validator v0.0.0 => ./validator
 )
