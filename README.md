@@ -1,5 +1,5 @@
 # aba-routingnumber-validator
-Validate that ABA bank routing numbers
+Validate ABA bank routing numbers
 
 We took the requiments from the following videos.
 
