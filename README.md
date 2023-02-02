@@ -1,2 +1,2 @@
-# aba-routingnumbers-validator
+# aba-routingnumber-validator
 Validate that ABA bank routing numbers
