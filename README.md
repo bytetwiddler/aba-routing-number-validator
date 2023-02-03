@@ -11,12 +11,13 @@ https://www.youtube.com/watch?v=D0jY_CuzcGw
 Little to no testing was done beyond the unit test in the module. 
 
 **example**
-```package main
+```
+package main
 
 import (
 	"fmt"
 
-	v "github.com/bytetwiddler/aba-routingnumber-validator"
+	v "github.com/bytetwiddler/aba-routing-number-validator"
 )
 
 
