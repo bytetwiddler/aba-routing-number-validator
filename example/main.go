@@ -10,18 +10,19 @@ func main() {
 
 	// ignoring errors for clarity
 
-	// turn string into slice of slice []int required by
-	// ValidateAbaRoutingNumber().
-	//
-	// note that you could just generate a slice []int yourself
-	// and pass to ValidateAbaRoutingNumber(). StringSlicer is
-	// provided as a convience as folks get stumped by go
-	// assuming 012312312 is an out of bound octal.
-	// this is a valid routing number
+	// note: that you could just generate a slice of []int 
+	// and pass to ValidateAbaRoutingNumber(). 
+	// StringSlicer function is provided as a convience as
+	// folks get stumped by golang assuming 012312312 is an
+	// out of bound octal.
+	// 123123123 is a valid routing number.
+	
+	// ValidateAbaRoutingNumber()
+	// turns string version of the number into slice of []int
 	slice, _ := v.StringSlicer("123123123")
 
-	// ValidateAbaRoutingNumber is the only require function
-	// it takes a slice of in []int and returns a bool, error
+	// ValidateAbaRoutingNumber is the only required function
+	// it takes a slice of int []int and returns a bool, error
 	res, _ := v.ValidateAbaRoutingNumber(slice)
 
 	fmt.Println(res)
