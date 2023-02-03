@@ -1,13 +1,12 @@
 # aba-routing-number-validator
-Validate ABA bank routing numbers
+Validate ABA bank routing numbers. The module implments the 73973972 weights + check digit algorithm
 
-I took the requiments from the following videos.
+I took the requirments from the following videos.
 
 https://www.youtube.com/watch?v=5wAE3E5zBe4
 
 https://www.youtube.com/watch?v=D0jY_CuzcGw
 
-Validator implments the 73973972 weights + check digit algorithm
 
 Little to no testing was done beyond the unit test in the module. 
 
