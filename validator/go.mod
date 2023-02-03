@@ -1,4 +1,4 @@
-module github.com/bytetwiddler/aba-routing-number-validator
+module github.com/bytetwiddler/aba-routingnumber-validator
 
 go 1.19
 
