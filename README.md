@@ -37,8 +37,9 @@ import (
  */ 
  
 func main() {
-	slice, _ := v.StringSlicer("123123123") // this is valid 
+	slice, _ := v.StringSlicer("123123123") // this is valid routing number
 	res, _ := v.ValidateAbaRoutingNumber(slice)
 	fmt.Println(res)
 }
 ```
+output:```true```
