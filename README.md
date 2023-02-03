@@ -31,8 +31,8 @@ import (
  *
  * 2) StringSlicer(a string) ([]int, error) 
  *     A utility function that takes the routing number as a string and 
- *.    converts it to a slice of int, so you can pass it into 
- *.    ValidateAbaRoutingNuber(). This helps getting around golang 
+ *     converts it to a slice of int, so you can pass it into 
+ *     ValidateAbaRoutingNuber(). This helps getting around golang 
  *     assuming 012312312 is an out of bounds octal.
  */ 
  
