@@ -1,4 +1,4 @@
-package validator
+package aba-routing-number-validator
 
 import (
 	"fmt"
